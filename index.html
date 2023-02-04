@@ -378,11 +378,11 @@
 <p><strong>双击安装包随后按照步骤来安装(照片是3.10.8的安装,给出的链接是3.9.2的,步骤都一样)</strong></p>
 </li>
 </ul>
-<p> &lt;img alt &#x3D;”python安装步骤” src&#x3D;”<a target="_blank" rel="noopener" href="https://599575461.github.io/Teaching/img/Install_python.png">https://599575461.github.io/Teaching/img/Install_python.png</a>“ style&#x3D;”zoom:100%;” &#x2F;</p>
+<p> &lt;img alt &#x3D;”python安装步骤” src&#x3D;”<a target="_blank" rel="noopener" href="https://599575461.github.io/img/Install_python.png">https://599575461.github.io/img/Install_python.png</a>“ style&#x3D;”zoom:100%;” &#x2F;</p>
 <p> 等待安装成功,看见<strong>Successfully</strong>表示成功安装</p>
 <h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p> 一段中文他的编码是怎样的的,如何去解码,都会影响结果</p>
-<p> &lt;img alt &#x3D; “GB 2312解码” src &#x3D; “<a target="_blank" rel="noopener" href="https://599575461.github.io/Teaching/img/en.png">https://599575461.github.io/Teaching/img/en.png</a>“ style&#x3D;”zoom:100%;” &#x2F;GB 2312解码</p>
-<p> &lt;img alt &#x3D; “UTF-8解码” src &#x3D;”<a target="_blank" rel="noopener" href="https://599575461.github.io/Teaching/img/dn.png">https://599575461.github.io/Teaching/img/dn.png</a>“ style&#x3D;”zoom:100%;” &#x2F;UTF-8解码</p>
+<p> &lt;img alt &#x3D; “GB 2312解码” src &#x3D; “<a target="_blank" rel="noopener" href="https://599575461.github.io/img/en.png">https://599575461.github.io/img/en.png</a>“ style&#x3D;”zoom:100%;” &#x2F;GB 2312解码</p>
+<p> &lt;img alt &#x3D; “UTF-8解码” src &#x3D;”<a target="_blank" rel="noopener" href="https://599575461.github.io/img/dn.png">https://599575461.github.io/img/dn.png</a>“ style&#x3D;”zoom:100%;” &#x2F;UTF-8解码</p>
 <p> 不同的解码方式就会早就不同的结果</p>
 <p> 文本原本是UTF-8编码,现在用GB 2312解码就会变成图1的结果</p>
 <p> 如果文本是GB 2312编码的,用UTF-8解码也会出现与原本不一样的结果</p>
@@ -950,12 +950,12 @@ yes_num-->if_finid(if后的代码)</pre>
 <p><img src="https://img2020.cnblogs.com/blog/445074/202003/445074-20200314115348431-79535743.jpg" alt="img"></p>
 <p>*图片来自<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lovesoo/">lovesoo - 博客园 (cnblogs.com)</a></p>
 <h3 id="第一个窗口"><a href="#第一个窗口" class="headerlink" title="第一个窗口"></a>第一个窗口</h3><p>这里给出一段Demo 程序,利用PyQt创建了一个窗口</p>
-<p><img src="https://599575461.github.io/Teaching/img/image-20230111173055485.png" alt="image-20230111173055485"></p>
+<p><img src="https://599575461.github.io/img/image-20230111173055485.png" alt="image-20230111173055485"></p>
 <p>如果看不懂，我们逐一分析</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入sys库</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="comment"># 导入PyQt5中的QtWidgets</span></span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtWidgets</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义Main类，继承QtWidgets.QMainWindow</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Main</span>(QtWidgets.QMainWindow):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># 定义超类，兼容Python2</span></span><br><span class="line">        <span class="built_in">super</span>(Main, self).__init__()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 定义app为QtWidgets.QApplication的实例化，把外部参数传进去</span></span><br><span class="line">    app = QtWidgets.QApplication(sys.argv)</span><br><span class="line">    <span class="comment"># 实例化Mian一个窗口</span></span><br><span class="line">    main = Main()</span><br><span class="line">    <span class="comment"># 让这个窗口显示</span></span><br><span class="line">    main.show()</span><br><span class="line">    <span class="comment"># 循环刷新，当退出时调用sys.exit退出</span></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
 
 <p>运行这段就会出现一个窗口</p>
-<p><img src="https://599575461.github.io/Teaching/img/image-20230111173646919.png" alt="image-20230111173646919"></p>
+<p><img src="https://599575461.github.io/img/image-20230111173646919.png" alt="image-20230111173646919"></p>
 <p>但是现在这个窗口是白的什么都没有，我们需要设置他的<strong>标题，图标，内容</strong>等</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtWidgets</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Main</span>(QtWidgets.QMainWindow):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Main, self).__init__()</span><br><span class="line">        <span class="comment"># 设置窗口标题为Demo</span></span><br><span class="line">        self.setWindowTitle(<span class="string">&#x27;Demo&#x27;</span>)</span><br><span class="line">        <span class="comment"># 设置长宽</span></span><br><span class="line">        self.resize(<span class="number">800</span>, <span class="number">430</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QtWidgets.QApplication(sys.argv)</span><br><span class="line">    main = Main()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -964,7 +964,7 @@ yes_num-->if_finid(if后的代码)</pre>
 <p>setWindowTitle直译过来就是<em>设置窗口标题</em></p>
 <p>想要改变窗口大小使用<strong>self.resize</strong>方法，这里设置长：800，宽：430</p>
 <p>运行后的效果：</p>
-<p><img src="https://599575461.github.io/Teaching/img/image-20230111174504529.png" alt="image-20230111174504529"></p>
+<p><img src="https://599575461.github.io/img/image-20230111174504529.png" alt="image-20230111174504529"></p>
 
       
 
@@ -1786,11 +1786,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程语言</a>
+                <a href="javascript:void(0)" class="js-tag color1">关于市面上的软件框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">关于市面上的软件框架</a>
+                <a href="javascript:void(0)" class="js-tag color5">编程语言</a>
               </li>
              
               <li class="article-tag-list-item">
