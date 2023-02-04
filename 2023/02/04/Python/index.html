@@ -15,8 +15,11 @@
 <meta property="og:site_name" content="Installation">
 <meta property="og:description" content="计算机基本知识你可以把计算机看成一堆硬件组成的集合 这些硬件之间相互联系,相互依赖 管理这些硬件的是操作系统 而程序是写在操做系统上的 所以就有这么一个大小关系 计算机本身操作系统程序 内存,CPU,硬盘是计算机的核心 在运行程序时  硬盘里的数据会给内存 内存与CPU进行交互,内存发送数据给CPU,让他处理,处理完在给内存 程序运行完,操作系统回收内存(Python的流程)    graph T">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://599575461.github.io/img/Install_python.png">
 <meta property="og:image" content="https://599575461.github.io/img/en.png">
 <meta property="og:image" content="https://599575461.github.io/img/dn.png">
+<meta property="og:image" content="https://599575461.github.io/img/Try_0.png">
+<meta property="og:image" content="https://599575461.github.io/img/Try_1.png">
 <meta property="og:image" content="https://img2020.cnblogs.com/blog/445074/202003/445074-20200314115300752-1630379301.jpg">
 <meta property="og:image" content="https://img2020.cnblogs.com/blog/445074/202003/445074-20200314115331437-1598416503.jpg">
 <meta property="og:image" content="https://img2020.cnblogs.com/blog/445074/202003/445074-20200314115348431-79535743.jpg">
@@ -24,11 +27,11 @@
 <meta property="og:image" content="https://599575461.github.io/img/image-20230111173646919.png">
 <meta property="og:image" content="https://599575461.github.io/img/image-20230111174504529.png">
 <meta property="article:published_time" content="2023-02-04T10:16:55.000Z">
-<meta property="article:modified_time" content="2023-02-04T05:28:47.089Z">
+<meta property="article:modified_time" content="2023-02-04T08:24:26.898Z">
 <meta property="article:author" content="Installation">
 <meta property="article:tag" content="Python编程语言">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://599575461.github.io/img/en.png">
+<meta name="twitter:image" content="https://599575461.github.io/img/Install_python.png">
   
     <link rel="alternative" href="/atom.xml" title="Installation" type="application/atom+xml">
   
@@ -390,7 +393,7 @@
 <p><strong>双击安装包随后按照步骤来安装(照片是3.10.8的安装,给出的链接是3.9.2的,步骤都一样)</strong></p>
 </li>
 </ul>
-<p> &lt;img alt &#x3D;”python安装步骤” src&#x3D;”<a target="_blank" rel="noopener" href="https://599575461.github.io/img/Install_python.png">https://599575461.github.io/img/Install_python.png</a>“ style&#x3D;”zoom:100%;” &#x2F;</p>
+<p><img src="https://599575461.github.io/img/Install_python.png" alt="Python安装"></p>
 <p> 等待安装成功,看见<strong>Successfully</strong>表示成功安装</p>
 <h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p> 一段中文他的编码是怎样的的,如何去解码,都会影响结果</p>
 <p><img src="https://599575461.github.io/img/en.png" alt="GB 2312解码"> GB 2312解码</p>
@@ -732,9 +735,9 @@ yes_num-->if_finid(if后的代码)</pre>
 <p> C++在C语言的基础上引入<strong>面向对象</strong>和一些工具从而使得C++被称为编程界的<strong>万金油</strong>,但是运行效率是比C语言低的</p>
 <p> 总的来说现在编程<strong>主要偏向面向对象</strong></p>
 <h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p> 也许你会在pycharm中看到这样的报错</p>
-<p> &lt;img src &#x3D; “<a target="_blank" rel="noopener" href="https://599575461.github.io/Teaching/img/Try_0.png">https://599575461.github.io/Teaching/img/Try_0.png</a>“</p>
+<p><img src="https://599575461.github.io/img/Try_0.png"></p>
 <p> 先逐一分析一下</p>
-<p> &lt;img src &#x3D; “<a target="_blank" rel="noopener" href="https://599575461.github.io/Teaching/img/Try_1.png">https://599575461.github.io/Teaching/img/Try_1.png</a>“</p>
+<p><img src="https://599575461.github.io/img/Try_1.png"></p>
 <p> 可以看到其实最主要的就是<strong>错误类型</strong>和<strong>错误原因</strong></p>
 <p> 而我们想要捕获到这个错误就要用到try语句</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>] <span class="comment">#定义一个a列表</span></span><br><span class="line"><span class="comment"># print(a[2]) #我们去索引a的第三个数，会报错</span></span><br><span class="line"><span class="comment"># IndexError: list index out of range</span></span><br><span class="line"><span class="keyword">try</span>:<span class="comment">#现在我们用try捕获错误</span></span><br><span class="line">    <span class="built_in">print</span>(a[<span class="number">2</span>])</span><br><span class="line"><span class="keyword">except</span> IndexError:<span class="comment">#用except捕获IndexError错误</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;索引错误&quot;</span>)</span><br><span class="line"></span><br><span class="line">索引错误</span><br></pre></td></tr></table></figure>
@@ -1221,11 +1224,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">关于市面上的软件框架</a>
+                <a href="javascript:void(0)" class="js-tag color5">编程语言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程语言</a>
+                <a href="javascript:void(0)" class="js-tag color1">关于市面上的软件框架</a>
               </li>
              
               <li class="article-tag-list-item">
